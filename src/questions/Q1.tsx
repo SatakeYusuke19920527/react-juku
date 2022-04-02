@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
-import '../styles/Q1.css';
+import '../styles/Q.css';
 const Q1 = () => {
   const [judgeNum, setJudgeNum] = useState<number>();
   const [isPrimeNumber, setIsPrimeNumber] = useState<boolean>(false);
@@ -18,6 +18,8 @@ const Q1 = () => {
    *
    */
   const judgePrimeNumber = () => {
+    // *********** ↓ここから実装してください！↓ *********** //
+    console.log('🚀 ~ file: Q1.tsx ~ line 22 ~ Q1 ~ judgeNum', judgeNum);
     setIsPrimeNumber(true);
   };
   return (

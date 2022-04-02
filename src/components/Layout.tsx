@@ -13,7 +13,7 @@ const Layout: React.FC = ({ children }) => {
         React塾
       </header>
       <main className="layoutMain">{children}</main>
-      <footer className="layoutFooter">Footer</footer>
+      <footer className="layoutFooter">presented by ProAca</footer>
     </section>
   );
 };

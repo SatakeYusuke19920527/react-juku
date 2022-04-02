@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import '../styles/RjCard.css';
 const RjQuestionElement = ({
-  level,
+  question,
   title,
   path,
 }: {
-  level: string;
+  question: string;
   title: string;
   path: string;
 }) => {
@@ -16,7 +16,7 @@ const RjQuestionElement = ({
   return (
     <section className="listWrapper" onClick={movePage}>
       <main className="listEmenent">
-        <h1>{level}</h1>
+        <h1>{question}</h1>
         <p>{title}</p>
       </main>
     </section>

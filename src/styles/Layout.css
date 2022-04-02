@@ -25,7 +25,9 @@
 .layoutFooter {
   display: flex;
   align-items: center;
+  padding-left: 5rem;
   height: 14vh;
+  font-size: 1.6rem;
   color: #fff;
   background-color: #212329;
 }
