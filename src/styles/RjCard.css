@@ -1,0 +1,17 @@
+.listWrapper {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.listEmenent {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.listEmenent p {
+  margin-left: 1em;
+  font-size: 1.2rem;
+  font-weight: 500;
+}

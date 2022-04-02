@@ -1,0 +1,31 @@
+.layoutWrapper {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.layoutHeader {
+  display: flex;
+  align-items: center;
+  height: 6vh;
+  padding-left: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #62dafb;
+  background-color: #212329;
+  cursor: pointer;
+}
+
+.layoutMain {
+  height: 80vh;
+  overflow-y: hidden;
+}
+
+.layoutFooter {
+  display: flex;
+  align-items: center;
+  height: 14vh;
+  color: #fff;
+  background-color: #212329;
+}
