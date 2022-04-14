@@ -10,19 +10,28 @@ import "../styles/Q.css";
  * by ゆうじろう
  *
  */
-
 enum Janken {
   ROCK,
   SCISSORS,
   PAPER,
 }
 
-const youLoseLabel: String = "YOU LOSE!!!!!!!";
-const youWinLabel: String = "YOU WIN!";
-const evenLabel: String = "あいこ";
+const labels = {
+  youLoseLabel: "YOU LOSE!!!!!!!",
+  youWinLabel: "YOU WIN!",
+  evenLabel: "あいこ",
+  rock: "ぐー",
+  scissors: "ちょき",
+  paper: "ぱー",
+  yourHand: "あなたの手",
+  opponentsHand: "CPUの手",
+  result: "勝敗",
+};
 
 const createOponentsHand = (): Janken => {
   const oponentsHand = Math.floor(Math.random() * 3);
+  const a = Janken[0];
+  console.log(a);
   if (oponentsHand === 0) {
     return Janken.ROCK;
   }
@@ -34,27 +43,33 @@ const createOponentsHand = (): Janken => {
 
 const battle = (yourHand: Janken, oponentsHand: Janken): String => {
   if (yourHand === oponentsHand) {
-    return evenLabel;
+    return labels.evenLabel;
   }
 
   switch (oponentsHand) {
     case Janken.ROCK:
-      return yourHand === Janken.PAPER ? youWinLabel : youLoseLabel;
+      return yourHand === Janken.PAPER
+        ? labels.youWinLabel
+        : labels.youLoseLabel;
     case Janken.SCISSORS:
-      return yourHand === Janken.ROCK ? youWinLabel : youLoseLabel;
+      return yourHand === Janken.ROCK
+        ? labels.youWinLabel
+        : labels.youLoseLabel;
     case Janken.PAPER:
-      return yourHand === Janken.SCISSORS ? youWinLabel : youLoseLabel;
+      return yourHand === Janken.SCISSORS
+        ? labels.youWinLabel
+        : labels.youLoseLabel;
   }
 };
 
 const getJankenLabel = (janken: Janken): String => {
   switch (janken) {
     case Janken.ROCK:
-      return "ぐー";
+      return labels.rock;
     case Janken.SCISSORS:
-      return "ちょき";
+      return labels.scissors;
     case Janken.PAPER:
-      return "ぱー";
+      return labels.paper;
   }
 };
 
@@ -95,13 +110,19 @@ const Q4 = () => {
             {getJankenLabel(Janken.PAPER)}
           </button>
           <h1>
-            {isBeforeBattle ? "あなたの手 : " + getJankenLabel(yourHand) : ""}
+            {isBeforeBattle
+              ? labels.yourHand + " : " + getJankenLabel(yourHand)
+              : ""}
           </h1>
           <h1>
-            {isBeforeBattle ? "CPUの手 : " + getJankenLabel(opponentsHand) : ""}
+            {isBeforeBattle
+              ? labels.opponentsHand + " : " + getJankenLabel(opponentsHand)
+              : ""}
           </h1>
           <h1>
-            {isBeforeBattle ? "勝敗 : " + battle(yourHand, opponentsHand) : ""}
+            {isBeforeBattle
+              ? labels.result + " : " + battle(yourHand, opponentsHand)
+              : ""}
           </h1>
         </div>
       </main>
