@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import '../styles/Q.css';
@@ -34,11 +33,11 @@ const isWin = (myHand: string, cpuHand: string) => {
 
 const Q4 = () => {
   const handArray = [HAND_TYPE.ROCK, HAND_TYPE.SCISSORS, HAND_TYPE.PAPER];
-  const [rand, setRand] = React.useState(0);
+  const [rand, setRand] = useState(0);
   const cpu = handArray[rand];
-  const [myHand, setMyHand] = React.useState('');
-  const [cpuHand, setCpuHand] = React.useState('');
-  const [result, setResult] = React.useState('');
+  const [myHand, setMyHand] = useState('');
+  const [cpuHand, setCpuHand] = useState('');
+  const [result, setResult] = useState('');
 
   const buttonClick = (value: string) => {
 
