@@ -33,7 +33,7 @@ const isWin = (myHand: string, cpuHand: string) => {
 
 const Q4 = () => {
   const handArray = [HAND_TYPE.ROCK, HAND_TYPE.SCISSORS, HAND_TYPE.PAPER];
-  const [rand, setRand] = useState(0);
+  const [rand, setRand] = useState(Math.floor(Math.random() * 3));
   const cpu = handArray[rand];
   const [myHand, setMyHand] = useState('');
   const [cpuHand, setCpuHand] = useState('');
