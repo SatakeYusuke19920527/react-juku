@@ -30,8 +30,6 @@ const labels = {
 
 const createOponentsHand = (): Janken => {
   const oponentsHand = Math.floor(Math.random() * 3);
-  const a = Janken[0];
-  console.log(a);
   if (oponentsHand === 0) {
     return Janken.ROCK;
   }
