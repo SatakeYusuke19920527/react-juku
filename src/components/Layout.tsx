@@ -10,7 +10,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <section className="layoutWrapper">
       <header className="layoutHeader" onClick={movePage}>
-        React塾
+        ProAca
       </header>
       <main className="layoutMain">{children}</main>
       <footer className="layoutFooter">presented by ProAca</footer>

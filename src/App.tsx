@@ -30,6 +30,11 @@ const App = () => {
         title="ReduxToolkitでTODOアプリ管理"
         path="/question5"
       />
+      <RjCard
+        question="Question6"
+        title="Firebase authでログイン機能を実装"
+        path="/question6/login"
+      />
     </Layout>
   );
 };

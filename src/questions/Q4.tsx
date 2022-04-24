@@ -11,12 +11,15 @@ import '../styles/Q.css';
  *
  */
 const Q4 = () => {
+  const handleGu = (te: string) => {
+    console.log(te);
+  };
   return (
     <Layout>
       <main className="questionWrapper">
         <div className="questionZone">
           <h1>src/questions/Q4.tsx じゃんけんプログラムを実装してください！</h1>
-          <button>ぐー</button>
+          <button onClick={() => handleGu('gu')}>ぐー</button>
           <button>ちょき</button>
           <button>ぱー</button>
           <h1>あなたの手 :</h1>
