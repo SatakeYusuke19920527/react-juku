@@ -25,10 +25,12 @@ export const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
-
+      if (action.payload.content != "") {
+        state.todos = [...state.todos, action.payload];
+      }
     },
     deleteTodo: (state, action) => {
-
+      state.todos = state.todos.filter((todo) => todo.id != action.payload);
     }
   },
 });

@@ -18,9 +18,20 @@ const Q1 = () => {
    *
    */
   const judgePrimeNumber = () => {
-    // *********** ↓ここから実装してください！↓ *********** //
-    console.log('🚀 ~ file: Q1.tsx ~ line 22 ~ Q1 ~ judgeNum', judgeNum);
-    setIsPrimeNumber(true);
+    // undifined,非整数,1以下はnot素数
+    if (!judgeNum || judgeNum <= 1 || !Number.isInteger(judgeNum)) {
+      setIsPrimeNumber(false);
+      return;
+    }
+
+    let result = true;
+    for (let i = 2; i < judgeNum; ++i) {
+      if (judgeNum % i == 0) {
+        result = false;
+        break;
+      }
+    }
+    setIsPrimeNumber(result);
   };
   return (
     <Layout>
