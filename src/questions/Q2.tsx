@@ -12,6 +12,12 @@ import '../styles/Q.css';
  */
 const Q2 = () => {
   const [num, setNum] = useState<number>(0);
+  const addNum = () =>{
+    setNum(num+1);
+  }
+  const reduceNum = () =>{
+    setNum(num-1);
+  }
   return (
     <Layout>
       <main className="questionWrapper">
@@ -20,8 +26,8 @@ const Q2 = () => {
             src/questions/Q2.tsx
             にカウントアップ・カウントダウンボタンを作成してください！
           </h1>
-          <button>+</button>
-          <button>-</button>
+          <button onClick={addNum}>+</button>
+          <button onClick={reduceNum}>-</button>
           <h1>{num}</h1>
         </div>
       </main>
