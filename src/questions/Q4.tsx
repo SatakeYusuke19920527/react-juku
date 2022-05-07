@@ -15,9 +15,11 @@ const Q4 = () => {
   const [cpuhand, setCpuHand] = useState<string>();
   const [result, setResult] = useState<string>();
   const handleTe = (te: string) => {
-    setMyHand(te);
-    setCpuHand(createCpuHand());
-    setResult(createResult());
+    const tmpMyHand = te;
+    setMyHand(tmpMyHand);
+    const tmpCpuHand = createCpuHand()
+    setCpuHand(tmpCpuHand);
+    setResult(createResult(tmpMyHand,tmpCpuHand));
   };
 
   const createCpuHand = () => {
@@ -31,26 +33,24 @@ const Q4 = () => {
     return "ちょき";
   };
 
-  const createResult = () => {
-    console.log(myhand);
-    console.log(cpuhand);
-    if (myhand === cpuhand) {
+  const createResult = (tmpMyHand:string, tmpCpuHand:string) => {
+    if (tmpMyHand === tmpCpuHand) {
       return "あいこ";
     }
-    if(myhand === "ぐー"){
-      if(cpuhand === "ぱー"){
+    if(tmpMyHand === "ぐー"){
+      if(tmpCpuHand === "ぱー"){
         return "あなたの負け";
       }
       return "あなたの勝ち";
     }
-    if(myhand === "ぱー"){
-      if(cpuhand === "ちょき"){
+    if(tmpMyHand === "ぱー"){
+      if(tmpCpuHand === "ちょき"){
         return "あなたの負け";
       }
       return "あなたの勝ち";
     }
-    if(myhand === "ちょき"){
-      if(cpuhand === "ぐー"){
+    if(tmpMyHand === "ちょき"){
+      if(tmpCpuHand === "ぐー"){
         return "あなたの負け";
       }
       return "あなたの勝ち";
