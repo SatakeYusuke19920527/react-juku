@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../app/store';
 
 export interface TodoState {
@@ -25,10 +25,10 @@ export const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
-
+      state.todos.push(action.payload);
     },
     deleteTodo: (state, action) => {
-
+      state.todos = state.todos.filter(o => o.id != action.payload);
     }
   },
 });
