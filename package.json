@@ -16,6 +16,8 @@
     "@types/react-dom": "^16.9.14",
     "@types/react-redux": "^7.1.23",
     "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "firebase": "^9.6.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^7.2.8",

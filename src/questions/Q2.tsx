@@ -20,8 +20,8 @@ const Q2 = () => {
             src/questions/Q2.tsx
             にカウントアップ・カウントダウンボタンを作成してください！
           </h1>
-          <button>+</button>
-          <button>-</button>
+          <button onClick={() => setNum(num + 1)}>+</button>
+          <button onClick={() => setNum(num - 1)}>-</button>
           <h1>{num}</h1>
         </div>
       </main>
