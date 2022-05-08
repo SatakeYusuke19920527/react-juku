@@ -20,6 +20,20 @@ const Q1 = () => {
   const judgePrimeNumber = () => {
     // *********** ↓ここから実装してください！↓ *********** //
     console.log('🚀 ~ file: Q1.tsx ~ line 22 ~ Q1 ~ judgeNum', judgeNum);
+    if(judgeNum === undefined){
+      return;
+    }
+    if (judgeNum === 2) setIsPrimeNumber(true);
+    if (judgeNum === 0 || judgeNum === 1) {
+      setIsPrimeNumber(false);
+      return;
+    } 
+    for (let i = 2; i < judgeNum; i++) {
+      if (judgeNum % i === 0) {
+        setIsPrimeNumber(false);
+        return;
+      }
+    }
     setIsPrimeNumber(true);
   };
   return (
